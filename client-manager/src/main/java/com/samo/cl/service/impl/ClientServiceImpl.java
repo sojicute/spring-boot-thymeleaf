@@ -23,4 +23,9 @@ public class ClientServiceImpl implements ClientService{
 		return clientRepository.findAll();
 	}
 
+	@Override
+	public Client saveClient(Client client) {
+		return clientRepository.save(client);
+	}
+
 }

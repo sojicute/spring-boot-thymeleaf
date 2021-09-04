@@ -26,6 +26,9 @@ public class ClientManagerApplication implements CommandLineRunner {
 		
 		Client client2 = new Client("Josuke", "Higashikata", "higashikata@mail.com");
 		clientRepository.save(client2);
+		
+		Client client3 = new Client("Miss", "The Rage", "misstherage@mail.com");
+		clientRepository.save(client3);
 
 	}
 

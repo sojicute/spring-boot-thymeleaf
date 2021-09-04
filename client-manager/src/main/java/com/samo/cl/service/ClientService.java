@@ -6,4 +6,6 @@ import com.samo.cl.entity.Client;
 
 public interface ClientService {
 	List<Client> getAllClient();
+	
+	Client saveClient(Client client);
 }
