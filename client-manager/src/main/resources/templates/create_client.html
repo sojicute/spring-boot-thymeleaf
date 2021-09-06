@@ -3,59 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <title>Client Manager</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 </head>
 <body>
-	<div class = "container">
-		<div class = "row">
-			<div class = "col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-				<h1 class = "text-center">Create new client</h1>
-				<div class = "card-body">
-					<form th:action="@{/clients}" th:object = "${client}" method="POST">
-						<div class = "form-group">
-							<label> Client First Name</label>
-							<input
-							type= "text"
-							name = "firstName"
-							th:field = "*{firstName}"
-							class = "form-control"
-							placeholder = "Enter Client First Name"
-							/>
-
-						</div>
-						<div class = "form-group">
-							<label> Client Last Name</label>
-							<input
-							type= "text"
-							name = "lastName"
-							th:field = "*{lastName}"
-							class = "form-control"
-							placeholder = "Enter Client Last Name"
-							/>
-						</div>
-						<div class = "form-group">
-							<label> Client Email</label>
-							<input
-							type= "text"
-							name = "email"
-							th:field = "*{email}"
-							class = "form-control"
-							placeholder = "Enter Client Email"
-							/>
-						</div>
-						<button type="submit" class = "btn btn-primary">
-							Submit
-						</button>
-
-					</form>
-				</div>
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start">
+				<a class="navbar-item" th:href="@{/clients}">Client Manager</a> <a
+					class="navbar-item" th:href="№">Link</a> <a class="navbar-item"
+					th:href="№">Link</a>
 			</div>
 		</div>
+	</nav>
+	<div class="container">
+		<h1 class="has-text-centered is-size-2">Create new client</h1>
+		<section class="section">
+			<div class="columns">
+				<div class="card column is-half is-offset-one-quarter">
+					<div class="card-content">
+						<form th:action="@{/clients}" th:object="${client}" method="POST">
+							<div class="field">
+								<label class="label">First Name</label>
+								<div class="control">
+									<input type="text" name="firstName" th:field="*{firstName}"
+										class="input" placeholder="Enter Client First Name" />
+								</div>
+							</div>
+							<div class="field">
+								<label class="label">Last Name</label>
+								<div class="control">
+									<input type="text" name="lastName" th:field="*{lastName}"
+										class="input" placeholder="Enter Client Last Name" />
+								</div>
+							</div>
+							<div class="field">
+								<label class="label">Email</label>
+								<div class="control">
+									<input type="email" name="lastName" th:field="*{email}"
+										class="input" placeholder="Enter Email" />
+								</div>
+							</div>
+							<div class="field is-grouped">
+								<div class="control">
+									<button type="submit" class="button is-primary">Submit</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 </body>
 </html>
