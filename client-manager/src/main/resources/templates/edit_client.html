@@ -16,12 +16,12 @@
 		</div>
 	</nav>
 	<div class="container">
-		<h1 class="has-text-centered is-size-2">Create new client</h1>
+		<h1 class="has-text-centered is-size-2">Edit client</h1>
 		<section class="section">
 			<div class="columns">
 				<div class="card column is-half is-offset-one-quarter">
 					<div class="card-content">
-						<form th:action="@{/clients}" th:object="${client}" method="POST">
+						<form th:action="@{/clients/{id} (id=${client.id})}" th:object="${client}" method="POST">
 							<div class="field">
 								<label class="label">First Name</label>
 								<div class="control">
@@ -45,7 +45,7 @@
 							</div>
 							<div class="field is-grouped">
 								<div class="control">
-									<button type="submit" class="button is-primary">Submit</button>
+									<button type="submit" class="button is-primary">Save</button>
 								</div>
 							</div>
 						</form>

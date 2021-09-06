@@ -11,9 +11,7 @@
 	<nav class="navbar" role="navigation" aria-label="main navigation">
 		<div id="navbarBasicExample" class="navbar-menu">
 			<div class="navbar-start">
-				<a class="navbar-item" th:href="@{/clients}">Client Manager</a> <a
-					class="navbar-item" th:href="№">Link</a> <a class="navbar-item"
-					th:href="№">Link</a>
+				<a class="navbar-item" th:href="@{/clients}">Client Manager</a>
 			</div>
 		</div>
 	</nav>
@@ -41,6 +39,10 @@
 						<td th:text="${client.firstName}"></td>
 						<td th:text="${client.lastName}"></td>
 						<td th:text="${client.email}"></td>
+						<td>
+							<a th:href="@{/clients/edit/{id}(id=${client.id})}" class="button is-primary">Edit</a>
+							<a th:href="@{/clients/{id}(id=${client.id})}" class="button is-primary">Delete</a>
+						</td>
 					</tr>
 				</tbody>
 			</table>

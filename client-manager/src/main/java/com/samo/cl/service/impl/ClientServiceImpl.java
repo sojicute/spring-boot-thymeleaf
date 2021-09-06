@@ -28,4 +28,20 @@ public class ClientServiceImpl implements ClientService{
 		return clientRepository.save(client);
 	}
 
+	@Override
+	public Client getClientById(Long id) {
+		return clientRepository.findById(id).get();
+	}
+
+	@Override
+	public Client updateClient(Client client) {
+		return clientRepository.save(client);
+	}
+
+	@Override
+	public void deleteClientById(Long id) {
+		clientRepository.deleteById(id);
+		
+	}
+
 }

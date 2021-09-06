@@ -21,14 +21,14 @@ public class ClientManagerApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		Client client1 = new Client("Joline", "Kudjo", "joline@mail.com");
-		clientRepository.save(client1);
-		
-		Client client2 = new Client("Josuke", "Higashikata", "higashikata@mail.com");
-		clientRepository.save(client2);
-		
-		Client client3 = new Client("Miss", "The Rage", "misstherage@mail.com");
-		clientRepository.save(client3);
+//		Client client1 = new Client("Joline", "Kudjo", "joline@mail.com");
+//		clientRepository.save(client1);
+//		
+//		Client client2 = new Client("Josuke", "Higashikata", "higashikata@mail.com");
+//		clientRepository.save(client2);
+//		
+//		Client client3 = new Client("Miss", "The Rage", "misstherage@mail.com");
+//		clientRepository.save(client3);
 
 	}
 
